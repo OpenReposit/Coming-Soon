@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Reposit — Coming Soon</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      color: #111;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      text-align: left;
+    }
+
+    .container img {
+      width: 170px;
+      height: auto;
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 6px 0 0;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .container img {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="logo.png">
+    <div>
+      <h1>Open Reposit</h1>
+      <p>Coming Soon</p>
+    </div>
+  </div>
+</body>
+</html>
