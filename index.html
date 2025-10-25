@@ -14,6 +14,9 @@
       background: #fff;
       color: #111;
       font-family: 'Inter', Arial, sans-serif;
+      user-select: none;
+      cursor: pointer;
+      text-align: center;
     }
 
     .container {
@@ -59,11 +62,27 @@
 </head>
 <body>
   <div class="container">
-    <img src="logo.png" alt="logo.png">
+    <img src="logo.png" alt="logo">
     <div>
       <h1>Open Reposit</h1>
       <p>Coming Soon</p>
     </div>
   </div>
+
+  <!-- Hidden audio element -->
+  <audio id="bgMusic" src="music.mp3" loop></audio>
+
+  <script>
+    const audio = document.getElementById('bgMusic');
+
+    function startMusic() {
+      audio.play().catch(err => console.error("Playback failed:", err));
+      // Remove the listener after first tap
+      document.body.removeEventListener('click', startMusic);
+    }
+
+    // Play music on the very first tap anywhere
+    document.body.addEventListener('click', startMusic);
+  </script>
 </body>
 </html>
